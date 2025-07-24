@@ -1,0 +1,105 @@
+machine learning
+
+subdomain of comp sci 
+focouses on solve a problem using statt function and predict the output
+
+
+--supervised learning--
+labelled records and out put is defined
+
+--un supervised learning --
+
+unlabaled data, mostly worked with pixles,
+collection is made by finding s simalarities in between records
+
+--reinforcement Learning--
+it is based on feedback loop
+
+
+
+--------Ml Model---------------
+
+has n inputs output is the prediction of desired output
+
+
+features
+
+
+Qualitive- categorical data (genders, nationality)
+
+1> no inherent order(no built in) also called NOMINAL DATA
+[USA, India, Canada]
+one hot coding -- if it matches the item from array set it data to "1" else "0"
+
+2>[emotion scale][age] -- Ordinal Data (are in built in order)
+
+Quantitative- numerical valued data (could be discrete or continuous) 
+
+
+-------------Tasks-------------
+
+1> Classification- predict discrete classes
+
+like -binary or multiClass-classification
+
+binary- between two- (cats, dogs) (good, bad)
+
+multiclass- (animals)
+
+
+2> Regression - predict continuous values (close to real value)
+	like (temperature) 
+
+---------------------------------
+
+good model bad model
+
+
+Training, validiation, and testing dataset
+
+
+we feed training dataset into our model - Training
+
+validation set is kind of reality check after training or while training
+to ensure model can handle unsure data
+
+----------Loss------
+difference between prediction and final value
+
+L1>
+loss= sum(y-real - y-predicted)----this type of loss is L1 loss
+
+
+L2>
+loss = sum((y-real - y-predicted)^2)
+
+3>Binary Cross-Entropy-loss
+
+here loss decrees as performance gets better
+
+loss = 1/N*sum(y-real * log(y-predicted) + (1 - y-real) * log((1 - y-predicted)))
+
+
+-------------------------
+
+train, validiate, and test
+
+here data is divide into three parts , 60% for training 20% for validiating and 20% for testing
+
+
+
+train, valild, test = np.split(df.smple(frac=1), [int(0.6*len(df)), int(0.8*len(df))])
+
+
+
+for scaling depends on dataset 
+
+from sklearn.preprocessing import StandardScaller
+
+scaler = StansardScaller()
+x = scaler.fit_transfrom(x)
+
+
+ 
+
+

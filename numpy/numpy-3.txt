@@ -1,0 +1,33 @@
+# Data structure: [restaurant_id, 2021, 2022, 2023, 2024]
+sales_data = np.array([
+    [1, 150000, 180000, 220000, 250000],  # Paradise Biryani
+    [2, 120000, 140000, 160000, 190000],  # Beijing Bites
+    [3, 200000, 230000, 260000, 300000],  # Pizza Hub
+    [4, 180000, 210000, 240000, 270000],  # Burger Point
+    [5, 160000, 185000, 205000, 230000]   # Chai Point
+])
+
+OPREATION ON GIVEN DATA IS DONE IN NUMPY-3.IPYNB
+
+
+Broadcasting 
+=> rules either same number or elements or 1
+
+------------------------------------------
+
+DataTypes of NP
+is used to define variable of c like data types
+
+
+
+
+---------------------------------------
+
+Storing Image in Matrix and Converting image in darkmode
+
+
+np.save('name') creates save file of extension npy numpy file 
+kind of executable file like .exe or .class
+
+np.load("file path") to load .npy file 
+ 

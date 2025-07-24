@@ -1,0 +1,164 @@
+-------numpy phase 2----------
+
+np.dtype() // changes the type of array
+
+-------------------
+
+Opreations on numpy array
+
+Indexing 
+
+arr = np.arange(0, 10)
+
+Slicing >> arr[0:5] returns basic slice same as python lists
+
+slicing with difference 
+>> arr[1:6:2]   it returns an array where there will be difference of in elements based on the Index of array
+
+using negative indexing 
+	arrp[-1]	
+
+-----------------------------
+
+Slicing in 2d Array
+
+arr_2d = np.array([[1,2,3], [4,5,6], [7,8,9]])
+
+// to target a particular element arr_2d[i,j]     this method does not work in python but works in numpy
+
+
+when you want to target entire array
+
+arr_2d[i] // for targeting row
+
+arr_2d[:, j]//  for targeting columns
+
+-----------------------------
+
+Sorting
+
+unsorted = np.array(//unsorted array) 
+
+sort = np.sort(unsorted) returns a sorted array
+
+another way for 2d array
+sort_2d = np.sort(unsorted_2d, axis = 0) // sorts the 2D array but colum wise
+					// axis = 1 will sort data by row
+
+---------------------------------
+
+Filtering in array
+
+numbers = np.array([values])
+
+even = numbers[numbers % 2 == 0]      // numpy allows expressions for array filtering
+					// python does not allow it
+
+Filter with Mask
+
+masking is storing the expressing in a variable and then using it for the filtering
+
+mask = numbers % 2 == 0
+numbers[mask]
+
+---------------------------------- 
+
+Fancy Indexing ns np.where()
+
+np.where() is a filter function for numpy that returns Indexes of filtered elements
+
+where_result = np.where(mask)
+
+it returns the filtered array Indexes
+which can be further used as 
+
+numbers[where_result]
+
+for further uses
+
+------------------------------
+
+Creating an by conditions by where()
+here the where np.(mask, x, y) takes three parameters 
+
+
+it can be used to make conditional clause kind of like "if else" for arrays
+
+where the elements that satisfies making expression will perform x operations on then else y opreations 
+
+it retruns the modified array with given condition
+------------------------------
+
+merging arrays 
+
+arr1 = np.array([array1])
+arr2 = np.array([array2])
+
+combined = np.concatenate((arr1, arr2)) // it mearges both array
+-----
+
+there is a problems where array shape or matrix shape needs to be same or compatiable 
+for that
+
+arr1.shape //retruns shape of array
+with using that 
+
+arr1.shape == arr2.shape will return result 
+
+-----------------------------
+
+add row and column
+
+original = np.array([array1][array2])
+new_row = np.array([array3])
+
+newR = np.vstack((original, new_row))
+
+here np.vstack (Vertical) will add row element to the previous metrix
+
+-----
+
+same for horizontal is hstack 
+
+np.hstack((original, newcolumn))  // it adds a column to existing matrix
+ 
+we pass tuples here
+
+vstack  = [first], [second], [third]
+
+hstack = here z isintroduced [x1,y1,z1], [x2,y2,z2], [x3,y3,z3] 
+
+here it element is added at third (or 2nd array pos) position of matrix
+
+-----
+
+delete the values from array
+
+deleted = np.delete(arr, nth) or for multiple np.delete(array, start, end)
+
+!! it returns the resulting array with deleted element
+
+-------------------------------------
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

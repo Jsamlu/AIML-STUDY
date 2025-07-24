@@ -1,0 +1,163 @@
+------linear regression-----
+
+LR is used to find the relations ships between features and labels 
+
+formula for LR is 
+
+y = mx + b
+
+y: value to be predicted
+m: the slope
+x: input value
+b: intercept
+
+in ml there are used as 
+
+y' = b + w1*x1
+
+where, 
+y is the predicted value 
+b is the bias (same as intercept)
+wn is the weight 
+xn is the feature value 
+
+
+weight are calculated from training
+here biases and weight may vary depending on the no of features
+
+ex. y' = b + w1x1 + w2x2+ … + wn+xn
+
+
+-----------loss-----------
+
+loss describes how wrong a models predictions are and purpose of training is to minimize the lose to its lowest possible value
+
+loss  = actual value - predicted value
+
+sign is not necessary in loss for ML
+so while calculation removing the sign is necessary 
+ways to remove the sign are
+	1> take the abs() or absolute value the output 
+	2> square the loss 
+
+--
+Types of loss
+
+L1- basic loss sum of the Act_value and Pred_val
+
+L2- square of the loss loss^2
+
+Mean absolute error (MAE)- avg of basic loss  I/n*(Act_val - Pred_val) 
+
+Mean Squared error (MSE)- 1/n*(loss)^2
+
+
+
+
+
+outliners: edge cases in data 
+
+MSE moves model more towards outliners where MAE doesn't 
+
+MSE. The model is closer to the outliers but further away from most of the other data points.
+
+MAE. The model is further away from the outliers but closer to most of the other data points.
+
+
+penalties for outliner in L2 is higher than L1
+
+
+
+--------------------Gradient Descent-------------------------
+
+Gradient descent is an iterative process of calculating weight and biases
+depending on the loss of the model
+
+the following are the steps taken in Gradient descent:
+
+	Calculate the loss with the current weight and bias.
+
+	Determine the direction to move the weights and bias that reduce loss.
+
+	Move the weight and bias values a small amount in the direction that reduces loss.
+
+	Return to step one and repeat the process until the model can't reduce the loss any further.
+
+
+formula:
+
+new_weight = old-weight - (small_amount * waight_slope)
+
+new_bias = old-bias - (small_amount * bias_slope)
+
+--------------------Hyper parameter-----------------------------
+
+hyper Parameters are the various variables that control different aspects of training
+
+it includes
+	learning Rate
+	batch size
+	epochs
+
+
+>> Learning rate
+Learning rate is floating point number
+if the learning rate is too low the model will take long time to converge the loss
+if the learning rate is too high the loss might never converge and keep bouncing around weights and biases
+
+optimal learning rate is said to be between high and low
+
+the process of adding learning rate is in gradient descent where the small amount is the learning rate 
+
+new model param are proportional to the slope of the model 
+where if the slope is large the model will take large step and vice versa for the small slope
+
+
+
+
+>> Batch size
+
+batch size is the number of examples the model processes before updating the weight and biases
+usual data is too big to process while finding right biases and weights therefore they are divided into batches
+
+
+common techniques to get right gradient
+
+stochastic gradient descent (SGD):
+	sgd takes a single example per iteration but it is very noisy 
+	noise refers to the variation during iteration (errors)
+	noise rather causes the increase in loss than making it less
+
+SGD can create noise through out the curve not just at the point of convergence
+
+
+mini batch Stochastic Gradient Descent (mini-batch-SGD):
+	in mini-batch-sgd the number of examples can be between full-batch (N) or sgd ( single example) the no of example will be more than 1 
+
+	the model choses example in each batch at random, averages their gradients and updates their weight & biases per iteration.
+
+small batches behave like sgd and larger batches behave like full-batch
+
+
+noise is sometimes good to find optimal weights and biases
+
+
+>> Epochs
+
+During training 1epochs meaning that each example is processes in training set once.
+
+epochs are need to defined before training process 
+higher epochs number will result in better model but will take longer time
+
+
+model of 1000 examples -> batch of 100 examples -> 1 epochs of 10 batches,
+here the weight and biases are being updates 100 times per epochs
+ 
+
+    
+
+
+
+
+
+ 

@@ -1,0 +1,116 @@
+----classification---
+
+classification is predicting which set of values are predicted
+
+logistic Regression helps in predict probability into binary classification 
+
+(there is also things like multiclass classification)
+
+
+---------thresholds and confusion matrices------------
+
+
+(CT) Classification Threshold-> higher probability for the expected output and lower probability for the un-expected output
+
+CT is value for probability acceptance (Keras predicts negative answer if the prediction is equal to threshold)
+
+--------------Confusion matrix-----------------
+
+the matrix of Actual positive, Negative and Predicted Positive, Negative
+
+here records are labelled as true positive, negative and false positive negative respectively
+
+
+if threshold is decreased all true negative and false positive will increase
+
+if threshold is increased all true positive and false negative will decrease
+
+used as default for generic and unspecified tasks
+
+-------accuracy-----------
+
+Accuracy is the proportion of all classification that where correct in the positive and negative.
+
+Accuracy = Correct classification / Total classifications
+
+= (tp + tn)/ (tp + tn + fp + fn)
+
+
+------recall or true positive rate(TPR) ------
+
+(TPR) recall is also called as probability detection
+recall is the proportion of all classification that were correct and positive by all true positive and negative
+
+recall = tp / tp+fn
+
+if we take a perfect and ideal model it will have the recall of 1.0 
+i.e 100% prediction
+
+
+in cases where the number of actual positives are low, here the recall is more meaningful than accuracy
+because it measures the ability to current identify all the positive instances
+
+---------(FPR) False positive Rate------
+
+fpr is the opposite of tpr it is the proportion of actual negatives that were classified as incorrect positives  
+also known as probability of the false alarm
+
+fpr = fp / tf + fp 
+
+ideal and perfect model would have 0.0 fpr
+
+
+------------Precision--------------------
+ precision is the proportions of all true positives by frue and false positives
+
+precision = tp / tp +fp
+
+precision and recall have inverse relationship
+
+it no of true positives are more precision will increase else recall will increase
+
+
+---------- Receiver operating characteristic curve (ROC)------------
+
+ROC curve is a visual representation of model performance over all thresholds
+
+it was a holdover from ww2
+
+y-axis is TPR and X axis is the FPR 
+
+
+----------------AUC area under the curve----------
+
+AUC represents the probability that the model, if given a randomly chosen positive and negative example it will rank positive higher than negative
+
+if the dataset is roughly balanced AUC is useful measure
+
+the model with greater area under the curve is generally the better one
+
+
+##just remember greater area  == higher AUC and good model 
+##reversing models positions might help in low or bad models which do not cover mush space
+
+
+----------Prediction Bias-----------
+
+Prediction bias is the difference in models prediction and ground truth in labelled data
+
+PB can be caused by 
+	biases or noise in the data
+	too much regularization, model being oversampled and loosing necessary complexity
+	bugs in the model training pipeline
+	The set of features provided to the model being insufficient for the task
+
+
+----------Multiclass classification-----------
+
+multiclass classification is handled using multiple binary classification like 
+
+In ABC where 
+
+A + B then the ( A + B ) + c
+
+here firstly the A, B is tested for binary classification the then the result is moved to the C for further binary classification
+
+

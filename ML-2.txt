@@ -1,0 +1,61 @@
+----ML--- google
+
+basis of ml is the process of training a piece of software called a model to make useful predictions and content
+
+Types of ml systems 
+1> Supervised Learning
+2> Unsupervised learning 
+3> Reinforcement learning
+4> Generative AI
+
+
+>>Supervised learning
+--
+Supervised learning will predict the answer after seeing a lot of data
+Common use cases of Supervised learning are 
+
+Regression and Classification
+
+>>Regression:
+regression model predicts numeric value 
+
+it consists of input data and respective outputs
+
+
+
+Classification:
+
+classification model are used to predict the class of an input 
+this is used it find difference between spams and emails
+
+classification models are divided into two types binary and multiclass
+
+Binary:
+binary model is used to find difference between two classes or states like rain or no rain
+
+
+Multiclass: 
+
+Multiclass models are used when there are multiple output cases like rain, hail, snow etc
+
+
+
+
+>> Unsupervised learning
+
+in Unsupervised learning the model makes predictions on data that doesn't have correct answers, here the goal of model is to identify meaningful patterns on which the data will be classified.
+
+A commonly used unsupervised learning model employs a technique called clustering
+
+
+
+>> Reinforcement learning 
+
+reinforcement learning model make predictions on the basis of user feedback like rewards and penalties based action performed within an environment 
+
+
+>> Generative AI
+
+gen AI is the class of models that create content from user input 
+
+gen AI uses a unsupervised approach for training data, model learns to mimic the data its trained from

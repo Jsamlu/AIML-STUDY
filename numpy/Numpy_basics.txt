@@ -1,0 +1,135 @@
+ -----------
+single dimension array is also said as vector [i]
+
+multiple dimension arry is also said as matrix [[i], [i], [i]] 
+
+To create arry through numpy 
+
+import numpy as nu
+arr = np.array([,,,])
+
+np.array() takes a list as input
+------------
+
+list vs nunpy.array
+
+--Declaration--
+
+py_list = [1,2,3]
+np_array = np.array([1,2,3])
+
+--multiplication--
+
+>> py_list * 2
+
+by printing it will return  [1,2,3] [1,2,3]
+multiplies the list unless opreation is done indivisally
+
+>> np_array * 2
+
+will print [2 4 6]   
+
+it multiplies indivisual numbers in array 
+
+numpy array is more efficient in doing arithematic opreations than python list // its running on cpp in backgroud
+
+-----
+
+np_array = np.arange(finalValue)  // it returns an array with elements up to finalValue
+
+-------
+
+import time
+
+time.time() //for recording time or stuff
+
+---------
+
+Creating Arrays from scratch
+ 
+	zeros = np.zeros((n,m))
+
+	ones = np.ones((n,m))
+
+	we can create arrays of constants
+
+	full = np.full((n,m), num)
+
+
+	num is the constant that will be filled in array
+	(n,m) are dimensions of matrices, we can use n for vectors
+
+------------
+
+Radom Array
+
+	Random values is in between 0-1
+
+random = np.random.random((n,m))	
+
+
+Sequence Array
+
+seq = np.arange(start, end, difference)  create array of ap
+
+
+--------------
+
+Vectors, Matrices, Tensor
+
+vec = np.array([1,2,3]) 1D
+
+matx = np.array([[1,2],[3,4]])  2D
+
+tens = np.array([[[1,2], [2,3], [3,4]],[[1,2], [2,3], [3,4]], [[1,2], [2,3], [3,4]]])
+
+
+--------------------
+
+Array Properties
+
+arr = np.array([[1,2,3],[4,5,6]])
+
+arr.shape >> returns shape > (n,m)
+arr.ndim >> returns Dimensions  2
+arr.size >> length of array
+arr.type >> Data type   // it depends of what type of data is being stored
+
+------------------
+
+Array Reshaping
+
+arr = np.arange(n)
+
+reshape = arr.reshape((n,m))         // takes the array and makes a matrix of given dimensions
+
+sa arr = [1,2,3,4,5,6,7,8,9,10,11,12]
+op: arr.reshape((3,4))
+
+>> [[1 2 3 4], [5 6 7 8], [9 10 11 12]]
+
+Flattned 
+	arr.flatten() // returns a flattned array, 
+
+
+Raveled
+
+	arr.ravel() //similar to flattens returns orignal array
+
+---------------
+
+Transpose of matrix
+
+trans = reshaped.T  // transpose the array given (n,m) => (m,n)
+
+------------------------
+
+
+
+
+
+
+
+
+
+

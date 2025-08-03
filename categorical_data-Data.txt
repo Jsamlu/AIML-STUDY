@@ -1,0 +1,58 @@
+------- Categorical Data -----------
+
+
+Categorical data has specific set of possible values. (usually data that defines groups)
+
+examples: 
+	> different species of animals
+	> weather or not an email is spam 
+
+## numerical / numbers can also be a Categorical Data 
+## True numerical data can be meaningfully multiplied  
+## a good example of this is postal code
+
+
+Encoding : is the process of converting the categorical data or other data into numerical vectors that model can understand.
+
+
+>> Vocabulary
+
+
+Dimension is synonym for number of elements in feature vector
+
+meaning the output can be between binary data or in multiple class like data
+
+
+>> if the feature of data have low number of possible categories, it is useful to encode it in to a vocabulary, the models treats each category as separate feature.
+
+example:  colours in rainbow where each colour is given am integer value for models understanding, so that the model can understand the relations between values.
+
+ 
+
+>> ONE-HOT ENCODING
+
+One-hot encoding is a way of representing categorical data as a vector in which:
+
+> one element is set to '1' and all the other element is set to '0'
+
+it is commonly used to represent strings or identifiers that have finite set of possible values.
+
+
+
+Country	Vector
+"Denmark"	1	0	0	0	0
+"Sweden"	0	1	0	0	0
+"Norway"	0	0	1	0	0
+"Finland"	0	0	0	1	0
+"Iceland"	0	0	0	0	1
+
+
+one-hot encoding is an alternative to representing data numerical data 
+where using numerical data is not making sense like giving 0, 1, 2, 3 indexes to countries names
+
+> in one-hot encoding each category will be represented as a vector of n elements
+> exactly one element in one-hot vectors will have value 1.0 and the remaining will have 0.0
+
+>>multi-one-hot vector is also in existence where element can be in multiple category do the vector will have multiples values 1.0 
+
+ 

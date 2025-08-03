@@ -1,0 +1,38 @@
+Data 
+
+types of data for ml
+
+1> Numerical Data
+2> Categorical Data
+
+
+Numerical Data usually numbers and integers that can be added or multiplied and can performed mathematical operations on
+they can be counted or ordered and many things
+
+
+how model actually ingest data as vectors?
+
+the model ingests a feature vector (a Floating Point vector)
+
+feature vector - same as it sounds an floating point vector(1D array) of required Features 
+feature Engineering - the process of determining the best way to represent raw data as the trainable vectors 
+
+
+feature engineering includes 
+	Normalization  : converting numerical values into standard range
+	Binning (Bucketing) : converting numerical values into buckets of range(converting simple feature into multiple range of binary features called buckets or bins)
+
+
+
+Visualize your data
+	graphs or histograms
+
+Statistically evaluate your data 
+	calculate mean, std, and the Quartile of data at 0th, 25th, 50th, and 100th
+
+
+Find outliers
+	outliers are the values that are far distant form the usual values of features and label, they often cause problems
+	if the outlier is not useful remove it, if it have an outlier label in case it is useful use methods like CLIPPING
+
+

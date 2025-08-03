@@ -1,0 +1,167 @@
+------ normalization --------
+
+The goal of normalization is to transform and balance the scale of features
+
+benefits of normalization
+
+>> Helps model converge more quickly during training 
+different ranges of features leads in bounce of weights and biases in Gradient Descent
+ 
+ADAM and ADAGARD is used to deal with such problems by adjusting the learning rate 
+
+  
+>> Helps model predict better predictions
+
+>>  Helps avoiding NAN trap, where nan is a high feature 
+
+>> Helps the model to learn appropriate weights
+
+	
+
+# if you normalize a feature while training you also need to normalize it while prediction
+
+
+
+Methods of Normalization 
+
+1> Linear Scaling
+2> Z-score scaling
+3> log scaling
+
+Clipping
+
+
+>> Linear scaling
+
+converting normal floating point numbers into standard values usually from 0 to 1 or -1 to 1
+
+formula : x' = (x-x_min)/(x_max-x_min)
+
+when to use Linear scaling
+ 
+> The min and max of dataset stays same and don't change much over time
+> Dataset contains less or no outliers 
+> Features are uniformly distributed across its range
+
+good example is human age
+
+
+
+>> Z-score Scaling
+
+in Z-score scaling the number of SD a value is from the mean 
+(it is hard to explain in words)
+
+if SD is 2 greater from the mean, z-score scaling value is +2.0
+if SD is 1.5 smaller from the mean, z-score scaling value will be -1.5
+
+formula : x' = (x - x_mean) / SD
+
+where x_mean is the mean of the feature and SD is the standard deviation 
+
+
+Z-score scaling is good when the data follows normal distribution or a distribution somewhat like normal distribution
+
+
+>> Log Scaling
+
+log scaling computes the logarithm of the raw value.
+
+in theory log can have any base but in log scaling usually calculates natural logarithms
+
+formula for log scaling : x' = ln(x)
+
+
+log scaling is helpful when the data strictly follows properties such as inversely proportional
+
+if x increases then y decreases
+
+or low value of x have very high value of y and vice versa
+
+log scaling changes the distribution, which helps the model to train and make better predictions
+
+
+
+>> Clipping 
+
+clipping is a technique to minimize the influence the outliers
+
+in clipping the extreme outliers to a certain point near (limiting the range) required range or lets say useful range 
+
+so if a dataset from 1-10 contains data from 1 to 4 in good amount and have some outliers at far distant like 7 or 10 then clipping it to 4.0 or 5.0 will help in such situations
+
+but there is a catch you need to be careful of the which outlier is being clipped else It will affect models predictions 
+
+
+
+SUMMARY
+
+
+> linear scaling - when features are mostly uniform and placed Flat-Shaped
+> z-score scaling - when the models is normally distributed (peak close to mean) Bell-Shaped
+> log scaling - when the distribution is heavy skewed at least either on one side of tail Heavy-Tail-shaped 
+
+
+-----------------------------
+
+>> Binning
+
+Binning is also called as bucketing.
+Binning is feature Engineering technique that groups different numerical subranges into bins or buckets.
+
+Binning is go alternative for scaling and clipping for conditions like:
+
+> The overall Linear relationship between the labels and the features are weak or non existent
+
+> when the feature values are clustered (forms separate groups can be in equal amount) 
+
+but not good if features are separated but does not form groups  
+
+
+
+
+>> Scrubbing 
+
+Scrubbing refers to the cleaning the data 
+
+Scrubbing includes Cleaning of data like:
+
+> Omitted values : bad or no data recorded (census fails to records a resident's age)
+
+> Duplicate examples : redundant data in existing csv
+
+> out of range features values : Bad data record by human mistake (extra zeros in amount)
+
+> Bad labels : data records have wrong label (needed label A but having label Z)
+
+
+
+>> Qualities of good data
+
+> Clearly named 
+> Checked or tested before training 
+> sensible (in student marks evaluation, values such as -1 for present should not be used)
+ 
+
+
+>> Polynomial Transforms
+
+Synthetic features : data created for testing values in features where the features values share relationship with values such as square, cube or other possible mathematical operations from one the existing features.
+
+it is used in linear regression when drawing a line is not efficient but rather a curve is 
+
+for example : 
+general formula for LR : y = b + w1.x1
+
+but for having curve we can use a synthetic feature say  x^2
+so we can have :
+	y= b + w1.x + w2.x^2
+
+this is not fixed and based of assumptions chances  of it working may vary 
+
+(related concept in categorical data is Feature Cross) 
+
+
+
+
+

@@ -1,0 +1,13 @@
+>> Common issues in categorical data
+
+in case of numerical data, it is often recorded by scientific instruments (have a good base)
+
+where as categorical data is usually recorded by humans or ml models
+
+manually recorded data is often labelled as better than ml recorded data
+
+
+raters -> difference in different data of same type, or by whom it is recorded
+
+> human raters
+> machine raters

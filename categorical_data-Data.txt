@@ -55,4 +55,39 @@ where using numerical data is not making sense like giving 0, 1, 2, 3 indexes to
 
 >>multi-one-hot vector is also in existence where element can be in multiple category do the vector will have multiples values 1.0 
 
+
+
+
+>> Sparse Representation
  
+a feature whose values are zero (or empty) is known as a sparse feature.
+
+colour is a good example of sparse feature 
+
+where rgb can have 0 ->  [1,0,0]
+or in a better way for ml
+
+-> [1,0,0,0,0,0,0,0]
+
+blue [0,0,1,0,0,0,0,0]
+
+since the 1 in blue is at the position 2 so the sparse representation for preceding one-hot-vector is '2'
+
+
+>> Outliers in categorical data 
+
+outliers exist in categorical data too. for example a rare colour for car such as move or avocado 
+
+how to deal :
+
+instead of making each outlier a different category we can make it a single "catch call" category where you can lump all the outliers call it as out-of-vocabulary.
+
+when number of categories is high one-hot encoding is a poor choice 
+
+Embedding modules is a better choice in such cases
+	the model typically trains faster 
+	the built model typically infers predications more quickly. that is ,the model has lower latency.
+
+Hashing (hashing trick) is a less common way to reduce the number of dimensions.
+
+
